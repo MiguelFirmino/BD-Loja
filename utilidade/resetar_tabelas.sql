@@ -1,0 +1,13 @@
+DELETE FROM usuario
+DBCC CHECKIDENT ('usuario', RESEED, 0);
+
+DELETE FROM produto
+DBCC CHECKIDENT ('produto', RESEED, 0);
+
+ALTER SEQUENCE sPessoa
+	RESTART WITH 1
+
+DELETE FROM pessoa
+
+DELETE FROM movimento
+DBCC CHECKIDENT ('movimento', RESEED, 0);
